@@ -6,25 +6,15 @@ import java.sql.SQLException;
 
 public class ConnectionJDBC {
 
-    public static void main(String[] args) throws SQLException {
+    public static void main(String[] args) {
 
         Password pwConnection = new Password();
-        Connection conn = null;
-        String pw = pwConnection.passwd;
-        String url = pwConnection.urlConn;
-        String user = pwConnection.user;
+        //Connection conn = null;
 
-        System.out.println("senha: " + pw + "\nUsuario: " + user + "\nUrl: " + url);
-
-        try {
-            conn = DriverManager.getConnection(url, user, pw);
+        try (Connection conn = DriverManager.getConnection(pwConnection.urlConn, pwConnection.user, pwConnection.passwd)){
             System.out.println("Conectado ao MYSQL com sucesso.");
         } catch (Exception e) {
-            System.out.println("Erro");
-        } finally {
-            conn.close();
+            System.out.println("Erro ao conectar ao servidor MYSQL");
         }
-
-        System.out.println(conn);
     }
 }
