@@ -1,7 +1,7 @@
 .gradle
 /build/
-/src/main/java/*/Secrets.java
-/src/main/resources/*
+/src/main/java/aula02/Secrets.java
+/src/main/resources/connection.properties
 
 # Ignore Gradle GUI config
 gradle-app.setting
