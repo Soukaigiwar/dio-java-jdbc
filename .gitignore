@@ -1,6 +1,7 @@
 .gradle
 /build/
-/src/main/java/conn/Password.java
+/src/main/java/*/Secrets.java
+/src/main/resources/*
 
 # Ignore Gradle GUI config
 gradle-app.setting
